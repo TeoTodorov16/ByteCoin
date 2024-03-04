@@ -9,13 +9,15 @@
 import UIKit
 
 class ViewController: UIViewController, UIPickerViewDataSource {
+
+    let coinManager = CoinManager()
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        <#code#>
+        return 1
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        <#code#>
+        return coinManager.currencyArray.count
     }
     
     
@@ -28,6 +30,8 @@ class ViewController: UIViewController, UIPickerViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        currencyPicker.dataSource = self
     }
 
 //Deployment
