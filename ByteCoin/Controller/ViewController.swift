@@ -24,8 +24,6 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         return coinManager.currencyArray[row]
     }
     
-    //
-    //
     
     
     
