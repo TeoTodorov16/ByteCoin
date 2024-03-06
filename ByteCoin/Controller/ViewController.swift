@@ -26,11 +26,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     
     //
     //
-    //
-    //
-    //
-    //
-    //
+    
     
     
     @IBOutlet weak var bitcoinLabel: UILabel!
