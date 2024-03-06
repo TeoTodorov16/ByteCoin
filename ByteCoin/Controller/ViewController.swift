@@ -24,6 +24,8 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         return coinManager.currencyArray[row]
     }
     
+    z
+    
     
     @IBOutlet weak var bitcoinLabel: UILabel!
     @IBOutlet weak var currencyLabel: UILabel!
