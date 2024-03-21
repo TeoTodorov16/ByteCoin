@@ -43,4 +43,5 @@ struct CoinManager {
                 task.resume()
             }
         }
+    //
 }
