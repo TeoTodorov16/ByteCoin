@@ -43,5 +43,5 @@ struct CoinManager {
                 task.resume()
             }
         }
-    //
+    // Making a new change to display the latest price of 1 Bitcoin (BTC) in US dollars (USD).
 }
