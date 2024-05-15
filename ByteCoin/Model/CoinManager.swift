@@ -48,6 +48,10 @@ struct CoinManager {
             //Create a JSONDecoder
             let decoder = JSONDecoder()
             do {
+                
+                //try to decode the data using the CoinData structure
+                let decodedData = try decoder.decode(CoinData.self, from: data)
+                
                
     
 }
