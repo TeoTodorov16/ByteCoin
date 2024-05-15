@@ -57,7 +57,13 @@ struct CoinManager {
                 print(lastPrice)
                 return lastPrice
                 
-            
+            } catch {
+                
+                //Catch and print any errors.
+                print(error)
+                return nil
+            }
+        }
     
 }
 
