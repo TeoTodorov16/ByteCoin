@@ -52,7 +52,12 @@ struct CoinManager {
                 //try to decode the data using the CoinData structure
                 let decodedData = try decoder.decode(CoinData.self, from: data)
                 
-               
+                //Get the last property from the decoded data.
+                let lastPrice = decodedData.rate
+                print(lastPrice)
+                return lastPrice
+                
+            
     
 }
 
