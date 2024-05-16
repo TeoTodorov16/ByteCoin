@@ -8,9 +8,15 @@
 
 import UIKit
 
-class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
+class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, CoinManagerDelegate {
+    
+    @IBOutlet weak var bitcoinLabel: UILabel!
+    @IBOutlet weak var currencyLabel: UILabel!
+    @IBOutlet weak var currencyPicker: UIPickerView!
+    
+    //Need to change this to a var to be able to modify its properties.
+    var coinManager = CoinManager()
 
-    let coinManager = CoinManager()
     
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -32,9 +38,6 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     
     
     
-    @IBOutlet weak var bitcoinLabel: UILabel!
-    @IBOutlet weak var currencyLabel: UILabel!
-    @IBOutlet weak var currencyPicker: UIPickerView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
