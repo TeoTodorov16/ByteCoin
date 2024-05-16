@@ -10,6 +10,10 @@ import Foundation
 
 struct CoinManager {
     
+    protocol CoinManagerDelegate {
+        
+    }
+    
     let baseURL = "https://rest.coinapi.io/v1/exchangerate/BTC"
     let apiKey = "49E6AF99-A3AB-4B4B-97B3-91E443B71922"
 
@@ -56,6 +60,8 @@ struct CoinManager {
                 let lastPrice = decodedData.rate
                 print(lastPrice)
                 return lastPrice
+                
+                
                 
             } catch {
                 
