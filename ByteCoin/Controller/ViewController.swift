@@ -17,7 +17,16 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     //Need to change this to a var to be able to modify its properties.
     var coinManager = CoinManager()
 
-    
+    override func viewDidLoad() {
+            super.viewDidLoad()
+            
+            //Easily Missed: Must set the coinManager's delegate as this current class so that we can recieve
+            //the notifications when the delegate methods are called.
+            coinManager.delegate = self
+            currencyPicker.dataSource = self
+            currencyPicker.delegate = self
+            
+        }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
@@ -37,15 +46,6 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     }
     
     
-    
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        
-        currencyPicker.dataSource = self
-        currencyPicker.delegate = self
-    }
 
 //Deployment
 }
