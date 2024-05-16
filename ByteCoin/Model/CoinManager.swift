@@ -12,6 +12,9 @@ struct CoinManager {
     
     protocol CoinManagerDelegate {
         
+       
+        func didUpdatePrice(price: String, currency: String)
+        func didFailWithError(error: Error)
     }
     
     let baseURL = "https://rest.coinapi.io/v1/exchangerate/BTC"
