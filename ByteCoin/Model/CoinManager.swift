@@ -12,7 +12,7 @@ import Foundation
 //delegate methods, i.e. the CoinManager.
 protocol CoinManagerDelegate {
     
-    
+
     func didUpdatePrice(price: String, currency: String)
     func didFailWithError(error: Error)
 }
@@ -46,7 +46,7 @@ struct CoinManager {
                     if let bitcoinPrice = self.parseJSON(safeData) {
                         
                         //Optional: round the price down to 2 decimal places.
-                        let priceString = String(format: "%.2f", bitcoinPrice)
+                        let priceString = String(format: "%.6f", bitcoinPrice)
                         
                         //Call the delegate method in the delegate (ViewController) and
                         //pass along the necessary data.
